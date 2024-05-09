@@ -38,5 +38,12 @@ testem.log
 /typings
 
 # System files
-.DS_Store
 Thumbs.db
+
+# Ignorar archivos y carpetas generados por MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+__MACOSX/

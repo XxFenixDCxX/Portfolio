@@ -1,0 +1,27 @@
+/* CSS personalizado para la animación */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Aplicar la animación al menú móvil */
+#mobile-menu {
+  animation: slideInFromRight 0.5s ease-in-out forwards;
+}
+
+#mobile-menu.out {
+  animation: slideOutToRight 0.5s ease-in-out forwards;
+}

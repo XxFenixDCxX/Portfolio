@@ -37,8 +37,8 @@
   </div>
 </nav>
 
-<div class="sm:hidden vertical-line animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginLefItems': isScrollTop}"></div>
-<div class="sm:hidden social-icons animationsTopScroll" [ngClass]="{'marginLefItems': isScrollTop}">
+<div *ngIf="!isMobileView" class="vertical-line animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginLefItems': isScrollTop}"></div>
+<div *ngIf="!isMobileView" class="social-icons animationsTopScroll" [ngClass]="{'marginLefItems': isScrollTop}">
   <a href="#" class="ml-1.5">
     <i class="fa-brands fa-linkedin-in"></i>
   </a>
@@ -47,12 +47,12 @@
   </a>
 </div>
 
-<div class="sm:hidden horizontal-line animationsTopScroll ml-10" [ngClass]="{'botoomLineMargin': isScrollTop}">
+<div *ngIf="!isMobileView" class="horizontal-line animationsTopScroll" [ngClass]="{'botoomLineMargin': isScrollTop}">
   <a href="#"><span class="text-center text-black text-sm font-bold">{{stringTextoFooter}} <b class="text-center text-yellow-500 text-sm font-bold">{{stringEnlaceFooter}}</b></span></a>
 </div>
 
-<div class="sm:hidden vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>
-<div class="sm:hidden social-iconsRight animationsTopScroll" [ngClass]="{'marginRightItems': isScrollTop}">
+<div *ngIf="!isMobileView" class="vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>
+<div *ngIf="!isMobileView" class="social-iconsRight animationsTopScroll" [ngClass]="{'marginRightItems': isScrollTop}">
   <span class="dot active mr-1.5"></span>
   <span class="dot mt-1.5 mr-1.5"></span>
 </div>

@@ -10,6 +10,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   isScrollTop: boolean = true;
+  isMobileView: boolean = false;
   showMobileMenu:boolean = false;
   stringTextoFooter: string = "- CONTINÚA, ";
   stringEnlaceFooter: string = "QUIERO VER MÁS -";
@@ -28,8 +29,10 @@ export class NavbarComponent implements OnInit {
       const mediaQuery = window.matchMedia('(min-width: 640px)');
       if (!mediaQuery.matches) {
         this.isScrollTop = false;
+        this.isMobileView = true;
       } else {
         this.isScrollTop = true;
+        this.isMobileView = false;
       }
     }
   }

@@ -1,11 +1,11 @@
-<nav class="w-610 h-48">
-  <div class="mx-auto px-2 sm:px-6 lg:px-8 bg-white">
+<nav class="h-screen animationsTopScroll bg-white" [ngClass]="{'menuWitheColorBarrTopScroll': isScrollTop}">
+  <div class=" mx-auto px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-10 items-center justify-between lg:ml-40 lg:mr-40">
-      <div class="flex-shrink-0 flex items-center">
+      <div class="flex-shrink-0 flex items-center animationsTopScroll" [ngClass]="{'menuItems': isScrollTop}">
         <img class="h-8 w-auto rounded-full" src="../../assets/img/arkaitzImagen.jpeg" alt="Foto de Arkaitz">
-        <h1 class="text-black text-sm font-bold ml-2">Arkaitz Calvo Saldias</h1>
+        <h1 class="text-black font-bold ml-2">Arkaitz Calvo Saldias</h1>
       </div>
-      <div class="hidden sm:block sm:ml-6">
+      <div class="hidden sm:block sm:ml-6 animationsTopScroll" [ngClass]="{'menuItems': isScrollTop}">
         <div class="flex space-x-4">
           <a href="#" class="text-yellow-500 px-3 py-2 text-sm font-bold" aria-current="page">Inicio</a>
           <a href="#" class="underline rounded-md px-3 py-2 text-sm font-bold">Team</a>
@@ -36,3 +36,24 @@
     </div>
   </div>
 </nav>
+
+<div class="vertical-line animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginLefItems': isScrollTop}"></div>
+<div class="social-icons animationsTopScroll" [ngClass]="{'marginLefItems': isScrollTop}">
+  <a href="#" class="ml-1.5">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+  <a href="#" class="ml-1.5">
+    <i class="fa-brands fa-github"></i>
+  </a>
+</div>
+
+<div class="horizontal-line animationsTopScroll ml-10" [ngClass]="{'botoomLineMargin': isScrollTop}">
+  <a href="#"><span class="text-center text-black text-sm font-bold">{{stringTextoFooter}} <b class="text-center text-yellow-500 text-sm font-bold">{{stringEnlaceFooter}}</b></span></a>
+</div>
+
+<div class="vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>
+<div class="social-iconsRight animationsTopScroll" [ngClass]="{'marginRightItems': isScrollTop}">
+  <span class="dot active mr-1.5"></span>
+  <span class="dot mt-1.5 mr-1.5"></span>
+</div>
+

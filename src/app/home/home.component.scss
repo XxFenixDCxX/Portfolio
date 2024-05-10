@@ -38,3 +38,9 @@ p, h1 {
 .button:hover {
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    text-align: center;
+  }
+}

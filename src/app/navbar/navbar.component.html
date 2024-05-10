@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <div id="mobile-menu" [ngClass]="{'out': !showMobileMenu}" class="sm:hidden transition-opacity duration-500 ease-in-out origin-top-right right-0 bg-gray-800 absolute z-10">
+  <div id="mobile-menu" [ngClass]="{'out': !showMobileMenu}" class="sm:hidden h-auto transition-opacity duration-500 ease-in-out origin-top-right right-0 bg-gray-800 absolute z-10">
     <div class="space-y-1 px-2 pb-3 pt-2">
       <a href="#" class="text-yellow-500 block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
       <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
@@ -37,8 +37,8 @@
   </div>
 </nav>
 
-<div class="vertical-line animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginLefItems': isScrollTop}"></div>
-<div class="social-icons animationsTopScroll" [ngClass]="{'marginLefItems': isScrollTop}">
+<div class="sm:hidden vertical-line animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginLefItems': isScrollTop}"></div>
+<div class="sm:hidden social-icons animationsTopScroll" [ngClass]="{'marginLefItems': isScrollTop}">
   <a href="#" class="ml-1.5">
     <i class="fa-brands fa-linkedin-in"></i>
   </a>
@@ -47,12 +47,12 @@
   </a>
 </div>
 
-<div class="horizontal-line animationsTopScroll ml-10" [ngClass]="{'botoomLineMargin': isScrollTop}">
+<div class="sm:hidden horizontal-line animationsTopScroll ml-10" [ngClass]="{'botoomLineMargin': isScrollTop}">
   <a href="#"><span class="text-center text-black text-sm font-bold">{{stringTextoFooter}} <b class="text-center text-yellow-500 text-sm font-bold">{{stringEnlaceFooter}}</b></span></a>
 </div>
 
-<div class="vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>
-<div class="social-iconsRight animationsTopScroll" [ngClass]="{'marginRightItems': isScrollTop}">
+<div class="sm:hidden vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>
+<div class="sm:hidden social-iconsRight animationsTopScroll" [ngClass]="{'marginRightItems': isScrollTop}">
   <span class="dot active mr-1.5"></span>
   <span class="dot mt-1.5 mr-1.5"></span>
 </div>

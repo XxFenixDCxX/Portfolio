@@ -20,3 +20,14 @@
 p, h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+@keyframes changeColor {
+  0% { color: #ffdb58; text-shadow: 0 0 10px #ffdb58; }
+  50% { color: #ffaf40; text-shadow: 5px 0 10px #ffaf40; }
+  100% { color: #ffd700; text-shadow: 10px 0 10px #ffd700; }
+}
+
+.animate-color {
+  animation: changeColor 3s infinite alternate;
+}
+

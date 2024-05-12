@@ -6,7 +6,7 @@ import { Octokit } from "@octokit/core";
 })
 export class GitHubService {
   octokit: Octokit = new Octokit({
-    auth: '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'
+    auth: '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'
   });
 
   async getFavoriteRepos() {
@@ -16,7 +16,6 @@ export class GitHubService {
       });
       return response.data;
     } catch (error) {
-      console.error("Error al obtener los repositorios favoritos:", error);
       throw error;
     }
   }

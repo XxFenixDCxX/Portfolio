@@ -1,5 +1,5 @@
 <section class="projects-section relative overflow-hidden">
-  <div class="overlayProyects"></div>
+  <div class="overlayProjects"></div>
   <div class="absolute inset-0 z-0">
     <img src="https://repository-images.githubusercontent.com/293594764/baaa9580-7f68-11eb-8e18-e956d8b8b6d8" alt="Fondo de sección" class="absolute inset-0 w-full h-full object-cover opacity-50">
   </div>
@@ -9,7 +9,56 @@
       <h2 class="text-xs mb-8 font-bold">EXPLORA MI <b class="text-yellow-500">TRABAJO</b></h2>
     </div>
     <div class="max-w-4xl text-center mb-8 text-sm m-auto">
-      <p class="mb-4">¡Explora mi selección de proyectos digitales desde el 2023! Estos repositorios en GitHub representan mi pasión y experiencia en el desarrollo de software. Haz clic en cada tarjeta para obtener más información y acceder al repositorio correspondiente.</p>
+      <p class="mb-4">¡Explora mi selección de proyectos digitales desde el 2023! Estos repositorios en GitHub representan mi pasión y experiencia en el desarrollo de software. Haz clic en cada tarjeta para obtener más información y acceder al repositorio correspondiente (Estan ordenados del mas antiguo al mas moderno).</p>
     </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+      <div *ngFor="let repo of repos" class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-4">
+          <h3 class="font-bold text-lg text-black cursor-pointer">
+            <a [href]="repo.html_url" target="_blank">{{ repo.name }}</a>
+          </h3>
+          <div class="flex items-center mb-2">
+            <a [href]="repo.owner.html_url" target="_blank" class="text-gray-600 text-xs">{{ repo.owner.login }}</a>
+          </div>
+          <p class="text-gray-600 text-sm font-normal">{{ repo.description }}</p>
+          <div class="flex justify-between mt-4">
+            <div>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Creado: {{ repo.created_at | date: 'mediumDate' }}</p>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Última actualización: {{ repo.updated_at | date: 'mediumDate' }}</p>
+            </div>
+            <div>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Lenguajes: {{ repo.language }}</p>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Estrellas: {{ repo.stargazers_count }}</p>
+            </div>
+            <div>
+              <a [href]="repo.html_url" target="_blank" class="">
+                <i class="fab fa-github text-gray-500 text-3xl"></i>
+              </a>
+              <a [href]="repo.html_url" target="_blank">
+                <img [src]="repo.owner.avatar_url" alt="Foto de perfil" class="w-8 h-8 rounded-full">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!reposErro" class="text-center mt-8">
+      <a href="https://github.com/XxFenixDCxX" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
+        Ver más en GitHub
+      </a>
+    </div>
+
+    <ng-template #noRepos>
+      <div class="flex flex-col items-center justify-center h-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m0-16V4m0 0v16m0-16h8m-16 0H4"/>
+        </svg>
+        <p class="text-center text-red-600 mb-2">¡Ups! No se encontraron repositorios favoritos o se produjo un error al cargarlos.</p>
+        <button class="text-sm text-white border border-zinc-700 px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-300 shadow-lg" (click)="reloadPage()">Volver a intentar</button>
+      </div>
+    </ng-template>
+
   </div>
 </section>

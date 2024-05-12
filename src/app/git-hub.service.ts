@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Octokit } from "@octokit/core";
+import { AppConfig } from '../config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GitHubService {
+
+  constructor() { }
   octokit: Octokit = new Octokit({
-    auth: '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'
+    auth: AppConfig.githubToken
   });
 
   async getFavoriteRepos() {

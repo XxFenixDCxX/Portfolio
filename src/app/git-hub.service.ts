@@ -6,7 +6,7 @@ import { Octokit } from "@octokit/core";
 })
 export class GitHubService {
   octokit: Octokit = new Octokit({
-    auth: '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'
+    auth: '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'
   });
 
   async getFavoriteRepos() {

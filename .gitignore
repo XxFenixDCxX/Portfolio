@@ -47,3 +47,6 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 __MACOSX/
+
+# Ignorado de variables de entorno
+./src/config.ts

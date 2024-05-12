@@ -47,15 +47,19 @@ export class NavbarComponent implements OnInit {
 
       const aboutComponent = document.querySelector('app-about');
       const homeComponent = document.querySelector('app-home');
+      const proyectsSection = document.querySelector('app-proyects');
 
-      if (aboutComponent && homeComponent) {
+      if (aboutComponent && homeComponent && proyectsSection) {
         const aboutComponentPosition = aboutComponent.getBoundingClientRect();
         const homeComponentPosition = homeComponent.getBoundingClientRect();
+        const proyectsSectionPosition = proyectsSection.getBoundingClientRect();
 
         if (aboutComponentPosition.top <= 0 && aboutComponentPosition.bottom > 0) {
           this.activeSection = 'about';
         } else if (homeComponentPosition.top <= 0 && homeComponentPosition.bottom > 0) {
           this.activeSection = 'home';
+        } else if (proyectsSectionPosition.top <= 0 && proyectsSectionPosition.bottom > 0) {
+          this.activeSection = 'proyects';
         }
       }
     }
@@ -88,6 +92,11 @@ export class NavbarComponent implements OnInit {
       const homeSection = document.getElementById('homeSection');
       if (homeSection) {
         homeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (toWhat === 'proyects') {
+      const proyectsSection = document.getElementById('proyectsSection');
+      if (proyectsSection) {
+        proyectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   }

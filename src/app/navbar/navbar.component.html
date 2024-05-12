@@ -55,7 +55,10 @@
 
 <div *ngIf="!isMobileView" class="vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>
 <div *ngIf="!isMobileView" class="social-iconsRight animationsTopScroll" [ngClass]="{'marginRightItems': isScrollTop}">
-  <span class="dot active mr-1.5"></span>
-  <span class="dot mt-1.5 mr-1.5"></span>
+  <span class="dot mr-1.5" [ngClass]="{'active': activeSection === 'home'}" (click)="scrollTo('home')"></span>
+  <span class="dot mt-1.5 mr-1.5" [ngClass]="{'active': activeSection === 'about'}" (click)="scrollTo('about')"></span>
+  <span class="dot mt-1.5 mr-1.5" [ngClass]="{'active': activeSection === 'proyects'}" (click)="scrollTo('proyects')"></span>
+  <span class="dot mt-1.5 mr-1.5" [ngClass]="{'active': activeSection === 'knowloments'}" (click)="scrollTo('knowloments')"></span>
+  <span class="dot mt-1.5 mr-1.5" [ngClass]="{'active': activeSection === 'contact'}" (click)="scrollTo('contact')"></span>
 </div>
 

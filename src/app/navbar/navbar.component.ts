@@ -12,8 +12,11 @@ export class NavbarComponent implements OnInit {
   isScrollTop: boolean = true;
   isMobileView: boolean = false;
   showMobileMenu:boolean = false;
+  activeSection: string = "home";
   stringTextoFooter: string = "- CONTINÚA, ";
   stringEnlaceFooter: string = "QUIERO VER MÁS -";
+
+  constructor() {}
 
   ngOnInit(): void {
     this.checkScreenSize();
@@ -48,6 +51,20 @@ export class NavbarComponent implements OnInit {
         this.stringTextoFooter = "- SUBIR AL ";
         this.stringEnlaceFooter = "INICIO -";
       }
+
+      const aboutComponent = document.querySelector('app-about');
+      const homeComponent = document.querySelector('app-home');
+
+      if (aboutComponent && homeComponent) {
+        const aboutComponentPosition = aboutComponent.getBoundingClientRect();
+        const homeComponentPosition = homeComponent.getBoundingClientRect();
+
+        if (aboutComponentPosition.top <= 0 && aboutComponentPosition.bottom > 0) {
+          this.activeSection = 'about';
+        } else if (homeComponentPosition.top <= 0 && homeComponentPosition.bottom > 0) {
+          this.activeSection = 'home';
+        }
+      }
     }
   }
 
@@ -62,6 +79,23 @@ export class NavbarComponent implements OnInit {
       });
     } else if(mobileMenu){
       mobileMenu.classList.remove('hidden');
+    }
+  }
+
+  scrollTo(toWhat : string) {
+    if(this.isMobileView){
+      this.showMobileMenu = false;
+    }
+    if (toWhat === 'about') {
+      const aboutSection = document.getElementById('aboutSection');
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (toWhat === 'home') {
+      const homeSection = document.getElementById('homeSection');
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 }

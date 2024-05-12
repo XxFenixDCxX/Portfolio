@@ -50,7 +50,8 @@
 </div>
 
 <div *ngIf="!isMobileView" class="horizontal-line animationsTopScroll" [ngClass]="{'botoomLineMargin': isScrollTop}">
-  <a href="#"><span class="text-center text-black text-sm font-bold">{{stringTextoFooter}} <b class="text-center text-yellow-500 text-sm font-bold">{{stringEnlaceFooter}}</b></span></a>
+  <a *ngIf="isScrollTop" (click)="scrollTo('about')"><span class="text-center text-black text-sm font-bold">- CONTINÚA, <b class="text-center text-yellow-500 text-sm font-bold">QUIERO VER MÁS -</b></span></a>
+  <a *ngIf="!isScrollTop" (click)="scrollTo('home')"><span class="text-center text-black text-sm font-bold">- SUBIR AL <b class="text-center text-yellow-500 text-sm font-bold">INICIO -</b></span></a>
 </div>
 
 <div *ngIf="!isMobileView" class="vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>

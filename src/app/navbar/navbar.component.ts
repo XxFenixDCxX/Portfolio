@@ -44,13 +44,6 @@ export class NavbarComponent implements OnInit {
   onWindowScroll() {
     if(!this.showMobileMenu){
       this.isScrollTop = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) === 0;
-      if (this.isScrollTop){
-        this.stringTextoFooter = "- CONTINÚA, ";
-        this.stringEnlaceFooter = "QUIERO VER MÁS -";
-      } else {
-        this.stringTextoFooter = "- SUBIR AL ";
-        this.stringEnlaceFooter = "INICIO -";
-      }
 
       const aboutComponent = document.querySelector('app-about');
       const homeComponent = document.querySelector('app-home');

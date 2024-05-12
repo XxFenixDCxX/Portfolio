@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
 
   checkScreenSize(): void {
     if (typeof window !== 'undefined') {
-      const mediaQuery = window.matchMedia('(min-width: 640px)');
+      const mediaQuery = window.matchMedia('(min-width: 825px)');
       if (!mediaQuery.matches) {
         this.isScrollTop = false;
         this.isMobileView = true;

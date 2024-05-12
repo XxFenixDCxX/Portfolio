@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
+**IMPORTANT**
+
+Before running the application, it is necessary to create a file inside the src folder named config.ts with the following content:
+
+```typescript
+export const AppConfig = {
+  production: false,
+  githubToken: 'YOUR_TOKEN_HERE'
+};
+```
+
+Replace YOUR_TOKEN_HERE with your personal GitHub token with the permission for public repositories. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

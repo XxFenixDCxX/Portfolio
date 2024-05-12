@@ -1,0 +1,17 @@
+@keyframes changeColor {
+  0% { color: #ffdb58; text-shadow: 0 0 10px #ffdb58; }
+  50% { color: #ffaf40; text-shadow: 5px 0 10px #ffaf40; }
+  100% { color: #ffd700; text-shadow: 10px 0 10px #ffd700; }
+}
+
+h1 {
+  animation: changeColor 3s infinite alternate;
+}
+
+.button {
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}

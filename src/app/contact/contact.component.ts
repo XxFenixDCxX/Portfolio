@@ -26,5 +26,9 @@ export class ContactComponent {
     const mailtoLink = "mailto:arkaitzcs@gmail.com?subject=" + subject + "&body=" + body;
 
     window.open(mailtoLink);
+    this.email = '';
+    this.nombre = '';
+    this.empresa = '';
+    this.mensaje = '';
   }
 }

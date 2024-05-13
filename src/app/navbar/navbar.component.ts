@@ -49,12 +49,14 @@ export class NavbarComponent implements OnInit {
       const homeComponent = document.querySelector('app-home');
       const proyectsSection = document.querySelector('app-proyects');
       const knowledgeComponent = document.querySelector('app-knowledge');
+      const contactComponent = document.querySelector('app-contact');
 
-      if (aboutComponent && homeComponent && proyectsSection && knowledgeComponent) {
+      if (aboutComponent && homeComponent && proyectsSection && knowledgeComponent && contactComponent) {
         const aboutComponentPosition = aboutComponent.getBoundingClientRect();
         const homeComponentPosition = homeComponent.getBoundingClientRect();
         const proyectsSectionPosition = proyectsSection.getBoundingClientRect();
         const knlowledgeComponentPosition = knowledgeComponent.getBoundingClientRect();
+        const contactComponentPosition = contactComponent.getBoundingClientRect();
 
         if (aboutComponentPosition.top <= 0 && aboutComponentPosition.bottom > 0) {
           this.activeSection = 'about';
@@ -64,6 +66,8 @@ export class NavbarComponent implements OnInit {
           this.activeSection = 'proyects';
         } else if (knlowledgeComponentPosition.top <= 0 && knlowledgeComponentPosition.bottom > 0) {
           this.activeSection = 'knowledge';
+        } else if (contactComponentPosition.top <= 0 && contactComponentPosition.bottom > 0) {
+          this.activeSection = 'contact';
         }
       }
     }
@@ -106,6 +110,11 @@ export class NavbarComponent implements OnInit {
       const knowledgeSection = document.getElementById('knowledgeSection');
       if (knowledgeSection) {
         knowledgeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (toWhat === 'contact') {
+      const contactSection = document.getElementById('contactSection');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   }

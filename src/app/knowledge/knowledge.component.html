@@ -1,1 +1,18 @@
-<p>knowledge works!</p>
+<div class="bg-gray-100">
+  <div class="p-4 rounded-md text-center mr-72 ml-72 py-12">
+    <h1 class="text-4xl font-bold mb-1">CONOCIMIENTOS</h1>
+    <h2 class="text-xs mb-8 font-bold"><b class="text-yellow-500">MIS HABILIDADES</b> EN...</h2>
+    <div class="mt-2" *ngFor="let knowledge of knowledges">
+      <div class="flex items-center justify-between">
+        <div class="flex">
+          <span class="bg-yellow-500 text-black w-32 h-5 font-bold text-sm rounded-l-md shadow-lg">{{ knowledge.name }}</span>
+        </div>
+        <div class="flex items-center flex-1">
+          <div [ngStyle]="{ width: knowledge.percentage + '%', 'background-color': 'rgba(107, 114, 128, ' + (knowledge.percentage / 100) + ')'}" class="h-5 rounded-r-md shadow-lg"></div>
+          <div [ngStyle]="{ width: (100 - knowledge.percentage) + '%' }" class="bg-white h-5 shadow-lg"></div>
+          <span class="bg-white font-bold text-xs h-5 pr-3 rounded-r-md">{{ knowledge.percentage }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

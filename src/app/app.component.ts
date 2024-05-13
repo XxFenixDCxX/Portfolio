@@ -18,6 +18,7 @@ export class AppComponent {
   constructor() {}
 
   @HostListener('contextmenu', ['$event'])
+  @HostListener('keydown.F12', ['$event'])
   onRightClick(event: MouseEvent) {
     event.preventDefault();
     const alertDiv = document.createElement('div');

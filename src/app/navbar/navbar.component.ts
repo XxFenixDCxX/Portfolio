@@ -88,9 +88,6 @@ export class NavbarComponent implements OnInit {
   }
 
   scrollTo(toWhat : string) {
-    if(this.isMobileView){
-      this.showMobileMenu = false;
-    }
     if (toWhat === 'about') {
       const aboutSection = document.getElementById('aboutSection');
       if (aboutSection) {
@@ -116,6 +113,11 @@ export class NavbarComponent implements OnInit {
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
+    }
+
+
+    if(this.isMobileView){
+      this.showMobileMenu = false;
     }
   }
 }

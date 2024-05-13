@@ -18,10 +18,10 @@ export class ProyectsComponent implements OnInit{
   ngOnInit(): void {
     this.gitHubService.getFavoriteRepos().then((repos) => {
       this.repos = repos.sort((a:any, b:any) => {
-        return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+        return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
       });
     }).catch(() => {
-      this.reposErro = true;
+        this.reposErro = true;
     });
   }
 

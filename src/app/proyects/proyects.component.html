@@ -9,10 +9,10 @@
       <h2 class="text-xs mb-8 font-bold">EXPLORA MI <b class="text-yellow-500">TRABAJO</b></h2>
     </div>
     <div class="max-w-4xl text-center mb-8 text-sm m-auto">
-      <p class="mb-4">¡Explora mi selección de proyectos digitales desde el 2023! Estos repositorios en GitHub representan mi pasión y experiencia en el desarrollo de software. Haz clic en cada tarjeta para obtener más información y acceder al repositorio correspondiente (Estan ordenados del mas antiguo al mas moderno).</p>
+      <p class="mb-4">¡Explora mi selección de proyectos digitales desde el 2023! Estos repositorios en GitHub representan mi pasión y experiencia en el desarrollo de software. Haz clic en cada tarjeta para obtener más información y acceder al repositorio correspondiente (Estan ordenados del mas nuevo al mas antiguo segun la fecha de modificacion).</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+    <div *ngIf="repos.length != 0 && !reposErro; else noRepos" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
       <div *ngFor="let repo of repos" class="bg-white shadow-md rounded-lg overflow-hidden">
         <div class="p-4">
           <h3 class="font-bold text-lg text-black cursor-pointer">
@@ -55,8 +55,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m0-16V4m0 0v16m0-16h8m-16 0H4"/>
         </svg>
-        <p class="text-center text-red-600 mb-2">¡Ups! No se encontraron repositorios favoritos o se produjo un error al cargarlos.</p>
-        <button class="text-sm text-white border border-zinc-700 px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-300 shadow-lg" (click)="reloadPage()">Volver a intentar</button>
+        <p class="text-center text-red-600 mb-2 font-bold">¡Ups! No se encontraron repositorios favoritos o se produjo un error al cargarlos.</p>
+        <button class="text-sm text-black border border-zinc-700 px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-300 shadow-lg font-bold" (click)="reloadPage()">Volver a intentar</button>
       </div>
     </ng-template>
 

@@ -1,0 +1,36 @@
+<section class="projects-section relative overflow-hidden">
+  <div class="overlayProjects"></div>
+  <div class="absolute inset-0 z-0">
+    <img src="../../assets/img/contactWallpaper.png" alt="Fondo de sección" class="absolute inset-0 w-full h-full object-cover opacity-50">
+  </div>
+  <div class="container mx-auto px-4 relative z-10 text-white py-32">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-1">CONTACTO</h1>
+      <h2 class="text-xs mb-8 font-bold">HABLEMOS DE TU <b class="text-yellow-500">PRÓXIMO PROYECTO</b></h2>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md text-black">
+      <form>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+          <input [(ngModel)]="email" type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-yellow-500">
+        </div>
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+          <input [(ngModel)]="nombre" type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-yellow-500">
+        </div>
+        <div class="mb-4">
+          <label for="company" class="block text-gray-700 text-sm font-bold mb-2">Nombre de la empresa (opcional):</label>
+          <input [(ngModel)]="empresa" type="text" id="company" name="company" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-yellow-500">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+          <textarea [(ngModel)]="mensaje" id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-yellow-500"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" (click)="enviarCorreo()">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

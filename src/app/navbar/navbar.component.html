@@ -12,6 +12,16 @@
           <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'proyects', 'underline': activeSection !== 'proyects'}" (click)="scrollTo('proyects')">{{translate('proyects')}}</a>
           <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'knowledge', 'underline': activeSection !== 'knowledge'}" (click)="scrollTo('knowledge')">{{translate('knowledge')}}</a>
           <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'contact', 'underline': activeSection !== 'contact'}" (click)="scrollTo('contact')">{{translate('contact')}}</a>
+          <div class="relative ml-4 my-auto">
+            <button class="p-1" (click)="toggleLanguageMenu()">
+              <img [src]="selectedLanguage.img" [alt]="selectedLanguage.alt" class="h-3">
+            </button>
+            <div *ngIf="showLanguageMenu" class="absolute mt-2 bg-white border border-gray-300 rounded shadow-lg">
+              <button *ngFor="let lang of languages" class="block p-1 w-full text-left" (click)="selectLanguage(lang)">
+                <img [src]="lang.img" [alt]="lang.alt" class="h-3">
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div *ngIf="isMobileView" class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 " >
@@ -35,6 +45,16 @@
       <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'proyects', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'proyects'}" (click)="scrollTo('proyects')">{{translate('proyects')}}</a>
       <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'knowledge', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'knowledge'}" (click)="scrollTo('knowledge')">{{translate('knowledge')}}</a>
       <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'contact', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'contact'}" (click)="scrollTo('contact')">{{translate('contact')}}</a>
+      <div class="relative">
+        <button class="p-1" (click)="toggleLanguageMenu()">
+          <img [src]="selectedLanguage.img" [alt]="selectedLanguage.alt" class="h-3">
+        </button>
+        <div *ngIf="showLanguageMenu" class="absolute mt-2 bg-white border border-gray-300 rounded shadow-lg">
+          <button *ngFor="let lang of languages" class="block p-1 w-full text-left" (click)="selectLanguage(lang)">
+            <img [src]="lang.img" [alt]="lang.alt" class="h-3">
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

@@ -14,12 +14,18 @@ export class NavbarComponent implements OnInit {
   isMobileView: boolean = false;
   showMobileMenu:boolean = false;
   activeSection: string = "home";
-  stringTextoFooter: string = "- CONTINÚA, ";
-  stringEnlaceFooter: string = "QUIERO VER MÁS -";
+  showLanguageMenu: boolean = false;
+  selectedLanguage = { img: '../../assets/img/es.png', alt: 'es' };
+  languages = [
+    { img: '../../assets/img/eu.png', alt: 'eu' },
+    { img: '../../assets/img/en.png', alt: 'en' },
+    { img: '../../assets/img/es.png', alt: 'es' }
+  ];
 
   constructor(private translator: TranslationService) {}
 
   ngOnInit(): void {
+    this.selectedLanguage = this.languages.find(language => language.alt === this.translator.getLanguage()) || this.selectedLanguage;
     this.checkScreenSize();
     window.addEventListener('resize', () => this.checkScreenSize());
   }
@@ -124,5 +130,18 @@ export class NavbarComponent implements OnInit {
 
   translate(key: string): string {
     return this.translator.translate(key);
+  }
+
+  toggleLanguageMenu() {
+    this.showLanguageMenu = !this.showLanguageMenu;
+  }
+
+  selectLanguage(language: { img: string, alt: string }) {
+    if(this.isMobileView){
+      this.showMobileMenu = false;
+    }
+    this.selectedLanguage = language;
+    this.showLanguageMenu = false;
+    this.translator.setLanguage(language.alt);
   }
 }

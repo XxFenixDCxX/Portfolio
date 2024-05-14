@@ -16,7 +16,7 @@ export class TranslationService {
     this.translations = await response.json();
   }
 
-  private detectAndSetLanguage() {
+  public detectAndSetLanguage() {
     const browserLanguage = navigator.language.split('-')[0];
     const supportedLanguages = ['en', 'es', 'eu'];
     this.currentLanguage = supportedLanguages.includes(browserLanguage) ? browserLanguage : 'es';
@@ -26,6 +26,10 @@ export class TranslationService {
   public setLanguage(language: string) {
     this.currentLanguage = language;
     this.loadTranslations(language);
+  }
+
+  public getLanguage(): string {
+    return this.currentLanguage;
   }
 
   public translate(key: string): string {

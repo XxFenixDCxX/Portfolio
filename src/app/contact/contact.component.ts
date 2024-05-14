@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-contact',
@@ -30,5 +31,10 @@ export class ContactComponent {
     this.nombre = '';
     this.empresa = '';
     this.mensaje = '';
+  }
+  constructor(private translator: TranslationService) {}
+
+  translate(key: string): string {
+    return this.translator.translate(key);
   }
 }

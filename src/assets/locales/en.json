@@ -29,5 +29,14 @@
   "aboutBackDescription": "Development of business logic and data management on the server using PHP, Node.js, and Python. Creation of RESTful APIs for frontend-backend communication. Use of Express.js and Django for agile and scalable development.",
   "aboutCleanCodeTitlePart1": "CLEAN ",
   "aboutCleanCodeTitlePart2": "CODE",
-  "aboutCleanCodeDescription": "Application of best programming practices to write clean and maintainable code. Focus on test-driven development (TDD) and continuous refactoring. Commitment to code quality and clarity at all times."
+  "aboutCleanCodeDescription": "Application of best programming practices to write clean and maintainable code. Focus on test-driven development (TDD) and continuous refactoring. Commitment to code quality and clarity at all times.",
+  "sectionImage": "Section Image",
+  "contactTitle": "CONTACT",
+  "contactSubtitlePart1": "LET'S TALK ABOUT YOUR ",
+  "contactSubtitlePart2": "NEXT PROJECT",
+  "email": "Email: ",
+  "nameContact": "Name:",
+  "companyName": "Company Name (optional):",
+  "message": "Message:",
+  "sendMessage": "Send Message"
 }

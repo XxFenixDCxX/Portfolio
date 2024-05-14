@@ -29,5 +29,14 @@
   "aboutBackDescription": "Negozio logika eta datuen kudeaketa zerbitzarian garapena PHP, Node.js eta Python erabiliz. RESTful API-ak eratu aurrealdeko-atzealdeko komunikazioarentzako. Express.js eta Django erabiltzea garapen agile eta eskalagarria.",
   "aboutCleanCodeTitlePart1": "KODE ",
   "aboutCleanCodeTitlePart2": "GARBIA",
-  "aboutCleanCodeDescription": "Kode garbi eta mantendu daitekeena idazteko programazio praktika onenak aplikatzea. Froga-daramatzan garapena (TDD) eta berrikuntza etengabean aritzea. Kodearen kalitatea eta argitasuna beti lortzeko konpromisoa."
+  "aboutCleanCodeDescription": "Kode garbi eta mantendu daitekeena idazteko programazio praktika onenak aplikatzea. Froga-daramatzan garapena (TDD) eta berrikuntza etengabean aritzea. Kodearen kalitatea eta argitasuna beti lortzeko konpromisoa.",
+  "sectionImage": "Atal Irudia",
+  "contactTitle": "KONTAKTUA",
+  "contactSubtitlePart1": "ZURE HURRENGO PROIEKTUARI BURUZ ",
+  "contactSubtitlePart2": "EZTERTZEN DUGU",
+  "email": "Posta elektronikoa:",
+  "nameContact": "Izena:",
+  "companyName": "Enpresaren Izena (aukerakoa):",
+  "message": "Mezua:",
+  "sendMessage": "Bidali Mezua"
 }

@@ -8,12 +8,19 @@ export class TranslationService {
   private translations: any = {};
 
   constructor() {
-    this.loadTranslations(this.currentLanguage);
+    this.detectAndSetLanguage();
   }
 
   private async loadTranslations(language: string) {
     const response = await fetch(`./assets/locales/${language}.json`);
     this.translations = await response.json();
+  }
+
+  private detectAndSetLanguage() {
+    const browserLanguage = navigator.language.split('-')[0];
+    const supportedLanguages = ['en', 'es', 'eu'];
+    this.currentLanguage = supportedLanguages.includes(browserLanguage) ? browserLanguage : 'es';
+    this.loadTranslations(this.currentLanguage);
   }
 
   public setLanguage(language: string) {

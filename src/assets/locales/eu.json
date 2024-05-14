@@ -44,5 +44,16 @@
   "btnHomeCurriculum": "[ KURRIKULUMA ]",
   "knowledgeTitle": "EZAGUTZAK",
   "knowledgeSubtitlePart1": "NIRE GAITASUNAK",
-  "knowledgeSubtitlePart2": " HONETAN..."
+  "knowledgeSubtitlePart2": " HONETAN...",
+  "proyectsTitle": "PROIEKTUAK",
+  "proyectsSubtitlePart1": "EZAGUTU NIRE ",
+  "proyectsSubtitlePart2": "LANA",
+  "proyectsDescription": "2023tik aurrera nire proiektu digitalen hautapenak esploratu! GitHub-eko biltegi hauek nire ardura eta esperientzia erakusten dute software garapenean. Klik egin kartak bakoitzeko informazio gehiago jasotzeko eta dagokion biltegia eskuratzeko (Azken eguneratzearen arabera ordenatuta daude, berriena dena).",
+  "proyectsCreate": "Sortua: ",
+  "proyectsLastUpdate": "Azken eguneratzea: ",
+  "proyectsLanguauges": "Hizkuntzak: ",
+  "proyectsStarts": "Izarrak: ",
+  "proyectsViewMoreGithub": "Gehiago ikusi GitHub-en",
+  "proyectsNotFoundError": "Txarto! Ez da aurkitu errepozitorio gogokoak edo errore bat gertatu da kargatzerakoan.",
+  "proyectsRety": "Birbideratu"
 }

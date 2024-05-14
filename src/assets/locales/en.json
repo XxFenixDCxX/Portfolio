@@ -44,5 +44,16 @@
   "btnHomeCurriculum": "[ CURRICULUM ]",
   "knowledgeTitle": "SKILLS",
   "knowledgeSubtitlePart1": "MY SKILLS",
-  "knowledgeSubtitlePart2": " IN..."
+  "knowledgeSubtitlePart2": " IN...",
+  "proyectsTitle": "PROJECTS",
+  "proyectsSubtitlePart1": "EXPLORE MY ",
+  "proyectsSubtitlePart2": "WORK",
+  "proyectsDescription": "Explore my selection of digital projects since 2023! These GitHub repositories represent my passion and experience in software development. Click on each card to learn more and access the corresponding repository (They are sorted from newest to oldest based on modification date).",
+  "proyectsCreate": "Created: ",
+  "proyectsLastUpdate": "Last update: ",
+  "proyectsLanguauges": "Languages: ",
+  "proyectsStarts": "Stars: ",
+  "proyectsViewMoreGithub": "View more on GitHub",
+  "proyectsNotFoundError": "Oops! No favorite repositories found or an error occurred while loading them.",
+  "proyectsRety": "Retry"
 }

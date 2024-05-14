@@ -5,11 +5,11 @@
   </div>
   <div class="container mx-auto px-4 relative z-10 text-white py-12">
     <div class="text-center">
-      <h1 class="text-4xl font-bold mb-1">PROYECTOS</h1>
-      <h2 class="text-xs mb-8 font-bold">EXPLORA MI <b class="text-yellow-500">TRABAJO</b></h2>
+      <h1 class="text-4xl font-bold mb-1">{{translate('proyectsTitle')}}</h1>
+      <h2 class="text-xs mb-8 font-bold">{{translate('proyectsSubtitlePart1')}}<b class="text-yellow-500">{{translate('proyectsSubtitlePart2')}}</b></h2>
     </div>
     <div class="max-w-4xl text-center mb-8 text-sm m-auto">
-      <p class="mb-4">¡Explora mi selección de proyectos digitales desde el 2023! Estos repositorios en GitHub representan mi pasión y experiencia en el desarrollo de software. Haz clic en cada tarjeta para obtener más información y acceder al repositorio correspondiente (Estan ordenados del mas nuevo al mas antiguo segun la fecha de modificacion).</p>
+      <p class="mb-4">{{translate('proyectsDescription')}}</p>
     </div>
 
     <div *ngIf="repos.length != 0 && !reposErro; else noRepos" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
@@ -24,12 +24,12 @@
           <p class="text-gray-600 text-sm font-normal">{{ repo.description }}</p>
           <div class="flex justify-between mt-4">
             <div>
-              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Creado: {{ repo.created_at | date: 'mediumDate' }}</p>
-              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Última actualización: {{ repo.updated_at | date: 'mediumDate' }}</p>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">{{translate('proyectsCreate')}}{{ repo.created_at | date: 'mediumDate' }}</p>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">{{translate('proyectsLastUpdate')}}{{ repo.updated_at | date: 'mediumDate' }}</p>
             </div>
             <div>
-              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Lenguajes: {{ repo.language }}</p>
-              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">Estrellas: {{ repo.stargazers_count }}</p>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">{{translate('proyectsLanguauges')}}{{ repo.language }}</p>
+              <p class="text-gray-500" [ngClass]="{'text-sm': isMobile}">{{translate('proyectsStarts')}}{{ repo.stargazers_count }}</p>
             </div>
             <div>
               <a [href]="repo.html_url" target="_blank" class="">
@@ -46,7 +46,7 @@
 
     <div *ngIf="!reposErro" class="text-center mt-8">
       <a href="https://github.com/XxFenixDCxX" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">
-        Ver más en GitHub
+        {{translate('proyectsViewMoreGithub')}}
       </a>
     </div>
 
@@ -55,8 +55,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m0-16V4m0 0v16m0-16h8m-16 0H4"/>
         </svg>
-        <p class="text-center text-red-600 mb-2 font-bold">¡Ups! No se encontraron repositorios favoritos o se produjo un error al cargarlos.</p>
-        <button class="text-sm text-black border border-zinc-700 px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-300 shadow-lg font-bold" (click)="reloadPage()">Volver a intentar</button>
+        <p class="text-center text-red-600 mb-2 font-bold">{{translate('proyectsNotFoundError')}}</p>
+        <button class="text-sm text-black border border-zinc-700 px-4 py-2 rounded-md hover:bg-zinc-700 transition duration-300 shadow-lg font-bold" (click)="reloadPage()">{{translate('proyectsRety')}}</button>
       </div>
     </ng-template>
 

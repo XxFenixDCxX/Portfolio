@@ -44,5 +44,16 @@
   "btnHomeCurriculum": "[ CURRICULUM ]",
   "knowledgeTitle": "CONOCIMIENTOS",
   "knowledgeSubtitlePart1": "MIS HABILIDADES",
-  "knowledgeSubtitlePart2": " EN..."
+  "knowledgeSubtitlePart2": " EN...",
+  "proyectsTitle": "PROYECTOS",
+  "proyectsSubtitlePart1": "EXPLORA MI ",
+  "proyectsSubtitlePart2": "TRABAJO",
+  "proyectsDescription": "¡Explora mi selección de proyectos digitales desde el 2023! Estos repositorios en GitHub representan mi pasión y experiencia en el desarrollo de software. Haz clic en cada tarjeta para obtener más información y acceder al repositorio correspondiente (Estan ordenados del mas nuevo al mas antiguo segun la fecha de modificacion).",
+  "proyectsCreate": "Creado: ",
+  "proyectsLastUpdate": "Última actualización: ",
+  "proyectsLanguauges": "Lenguajes: ",
+  "proyectsStarts": "Estrellas: ",
+  "proyectsViewMoreGithub": "Ver más en GitHub",
+  "proyectsNotFoundError": "¡Ups! No se encontraron repositorios favoritos o se produjo un error al cargarlos.",
+  "proyectsRety": "Volver a intentar"
 }

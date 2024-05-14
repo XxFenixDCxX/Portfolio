@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-knowledge',
@@ -38,4 +39,9 @@ export class KnowledgeComponent {
     { name: 'NUnit', percentage: 60 },
   ];
 
+  constructor(private translator: TranslationService) {}
+
+  translate(key: string): string {
+    return this.translator.translate(key);
+  }
 }

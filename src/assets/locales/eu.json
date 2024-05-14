@@ -41,5 +41,8 @@
   "sendMessage": "Bidali Mezua",
   "homeTitle": "- FULLSTACK GARATZAILEA -",
   "btnHomeAboutMe": "[ NIRE BURUZ ]",
-  "btnHomeCurriculum": "[ KURRIKULUMA ]"
+  "btnHomeCurriculum": "[ KURRIKULUMA ]",
+  "knowledgeTitle": "EZAGUTZAK",
+  "knowledgeSubtitlePart1": "NIRE GAITASUNAK",
+  "knowledgeSubtitlePart2": " HONETAN..."
 }

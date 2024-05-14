@@ -41,5 +41,8 @@
   "sendMessage": "Enviar mensaje",
   "homeTitle": "- DESARROLLADOR FULLSTACK -",
   "btnHomeAboutMe": "[ SOBRE MÍ ]",
-  "btnHomeCurriculum": "[ CURRICULUM ]"
+  "btnHomeCurriculum": "[ CURRICULUM ]",
+  "knowledgeTitle": "CONOCIMIENTOS",
+  "knowledgeSubtitlePart1": "MIS HABILIDADES",
+  "knowledgeSubtitlePart2": " EN..."
 }

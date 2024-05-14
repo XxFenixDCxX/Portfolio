@@ -38,5 +38,8 @@
   "nameContact": "Izena:",
   "companyName": "Enpresaren Izena (aukerakoa):",
   "message": "Mezua:",
-  "sendMessage": "Bidali Mezua"
+  "sendMessage": "Bidali Mezua",
+  "homeTitle": "- FULLSTACK GARATZAILEA -",
+  "btnHomeAboutMe": "[ NIRE BURUZ ]",
+  "btnHomeCurriculum": "[ KURRIKULUMA ]"
 }

@@ -38,5 +38,8 @@
   "nameContact": "Name:",
   "companyName": "Company Name (optional):",
   "message": "Message:",
-  "sendMessage": "Send Message"
+  "sendMessage": "Send Message",
+  "homeTitle": "- FULLSTACK DEVELOPER -",
+  "btnHomeAboutMe": "[ ABOUT ME ]",
+  "btnHomeCurriculum": "[ CURRICULUM ]"
 }

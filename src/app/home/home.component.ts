@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-home',
@@ -13,5 +14,11 @@ export class HomeComponent {
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  constructor(private translator: TranslationService) {}
+
+  translate(key: string): string {
+    return this.translator.translate(key);
   }
 }

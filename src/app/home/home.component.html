@@ -2,12 +2,12 @@
 <div>
   <img class="banner-image" src="../../assets/img/heroWallpaper.jpg" alt="Banner Image">
   <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
-    <h1 class="text-6xl font-bold mb-5 animate-color">Arkaitz Calvo Saldias</h1>
-    <p class="text-xl font-bold">- DESARROLLADOR FULLSTACK -</p>
+    <h1 class="text-6xl font-bold mb-5 animate-color">{{translate('name')}}</h1>
+    <p class="text-xl font-bold">{{translate('homeTitle')}}</p>
   </div>
 
   <div class="absolute bottom-0 left-0 right-0 flex justify-center mb-32">
-    <button class="bg-zinc-700 text-yellow-500 font-bold py-2 px-4 mr-3 button" (click)="scrollToAbout()">[ SOBRE MÍ ]</button>
-    <a href="../../assets/pdf/CurriculumColor.pdf" target="_blank" class="bg-yellow-500 text-white font-bold py-2 px-4 button">[ CURRICULUM ]</a>
+    <button class="bg-zinc-700 text-yellow-500 font-bold py-2 px-4 mr-3 button" (click)="scrollToAbout()">{{translate('btnHomeAboutMe')}}</button>
+    <a href="../../assets/pdf/CurriculumColor.pdf" target="_blank" class="bg-yellow-500 text-white font-bold py-2 px-4 button">{{translate('btnHomeCurriculum')}}</a>
   </div>
 </div>

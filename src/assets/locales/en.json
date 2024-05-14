@@ -11,6 +11,23 @@
   "navbarBotonText1Par2": "I WANT TO SEE MORE -",
   "navbarBotonText2Par1": "- GO UP TO ",
   "navbarBotonText2Par2": "HOME -",
-  "openMenu": "Open main menu"
-
+  "openMenu": "Open main menu",
+  "aboutSubtitlePart1": "DESIGN AND CODE YOUR WEBSITE: ",
+  "aboutSubtitlePart2": "FULLSTACK IN ACTION!",
+  "aboutDescription1": "With a deep passion for computer science and video games, I have cultivated an insatiable curiosity that constantly drives me to stay abreast of the latest trends and emerging technologies. With a degree in multiplatform application development, I have honed my skills as a developer and demonstrated my ability to tackle challenges with creativity, whether in the classroom or in real-world projects.",
+  "aboutDescription2": "My quest in a company revolves around finding an environment that fosters growth and innovation, where I can contribute my expertise while continuing to learn and grow professionally. I am excited about new opportunities that allow me to expand my skill set and take on exciting projects in the world of software development.",
+  "btnColorCurriculum": "[MY RESUME (PDF, COLOR)]",
+  "btnBWCurriculum": "[MY RESUME (PDF, B/W)]",
+  "aboutFrontTitlePart1": "FRONTEND ",
+  "aboutFrontTitlePart2": "DEVELOPER",
+  "aboutFrontDescription": "Creation of attractive and responsive user interfaces with HTML5, CSS3, and JavaScript. Use of jQuery for dynamic functionalities and Bootstrap for rapid implementation of responsive designs. Expertise in WordPress and React for advanced web applications.",
+  "aboutBDDManagementTitlePart1": "DATABASE ",
+  "aboutBDDManagementTitlePart2": "MANAGEMENT",
+  "aboutBDDManagementDescription": "Efficient management of databases with MySQL and Microsoft SQL Server. Design of database schemas and advanced SQL queries for optimal performance. Experience in storing and retrieving large volumes of data.",
+  "aboutBackTitlePart1": "BACKEND ",
+  "aboutBackTitlePart2": "DEVELOPER",
+  "aboutBackDescription": "Development of business logic and data management on the server using PHP, Node.js, and Python. Creation of RESTful APIs for frontend-backend communication. Use of Express.js and Django for agile and scalable development.",
+  "aboutCleanCodeTitlePart1": "CLEAN ",
+  "aboutCleanCodeTitlePart2": "CODE",
+  "aboutCleanCodeDescription": "Application of best programming practices to write clean and maintainable code. Focus on test-driven development (TDD) and continuous refactoring. Commitment to code quality and clarity at all times."
 }

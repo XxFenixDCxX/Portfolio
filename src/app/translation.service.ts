@@ -8,7 +8,7 @@ export class TranslationService {
   private translations: any = {};
 
   constructor() {
-    this.detectAndSetLanguage();
+    this.loadTranslations(this.currentLanguage);
   }
 
   private async loadTranslations(language: string) {

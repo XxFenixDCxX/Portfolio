@@ -1,3 +1,16 @@
 {
-  "aboutTitle": "ABOUT ME"
+  "aboutTitle": "ABOUT ME",
+  "name": "Arkaitz Calvo Saldias",
+  "altPersonalImg": "Image of Arkaitz Calvo Saldias",
+  "home": "Home",
+  "about": "About",
+  "proyects": "Proyects",
+  "knowledge": "Knowledge",
+  "contact": "Contact",
+  "navbarBotonText1Par1": "- CONTINUE, ",
+  "navbarBotonText1Par2": "I WANT TO SEE MORE -",
+  "navbarBotonText2Par1": "- GO UP TO ",
+  "navbarBotonText2Par2": "HOME -",
+  "openMenu": "Open main menu"
+
 }

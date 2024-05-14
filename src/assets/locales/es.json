@@ -1,3 +1,15 @@
 {
-  "aboutTitle": "SOBRE MI"
+  "aboutTitle": "SOBRE MI",
+  "name": "Arkaitz Calvo Saldias",
+  "altPersonalImg": "Foto de Arkaitz Calvo Saldias",
+  "home": "Inicio",
+  "about": "Sobre mi",
+  "proyects": "Proyectos",
+  "knowledge": "Conocimientos",
+  "contact": "Contacto",
+  "navbarBotonText1Par1": "- CONTINÚA, ",
+  "navbarBotonText1Par2": "QUIERO VER MÁS -",
+  "navbarBotonText2Par1": "- SUBIR AL ",
+  "navbarBotonText2Par2": "INICIO -",
+  "openMenu": "Abrir menú principal"
 }

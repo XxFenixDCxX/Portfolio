@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +17,7 @@ export class NavbarComponent implements OnInit {
   stringTextoFooter: string = "- CONTINÚA, ";
   stringEnlaceFooter: string = "QUIERO VER MÁS -";
 
-  constructor() {}
+  constructor(private translator: TranslationService) {}
 
   ngOnInit(): void {
     this.checkScreenSize();
@@ -119,5 +120,9 @@ export class NavbarComponent implements OnInit {
     if(this.isMobileView){
       this.showMobileMenu = false;
     }
+  }
+
+  translate(key: string): string {
+    return this.translator.translate(key);
   }
 }

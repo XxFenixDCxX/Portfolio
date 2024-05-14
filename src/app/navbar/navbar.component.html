@@ -1,17 +1,17 @@
 <nav class="h-screen animationsTopScroll bg-white" [ngClass]="{'menuWitheColorBarrTopScroll': isScrollTop && !isMobileView}">
   <div class=" mx-auto px-2 sm:px-6 lg:px-8">
-    <div class="relative flex h-10 items-center justify-between lg:ml-40 lg:mr-40">
+    <div class="relative flex h-10 items-center justify-between lg:ml-28 lg:mr-28">
       <div class="flex-shrink-0 flex items-center animationsTopScroll" [ngClass]="{'menuItems': isScrollTop && !isMobileView}">
-        <img class="h-8 w-auto rounded-full" src="../../assets/img/arkaitzImagen.jpeg" alt="Foto de Arkaitz">
-        <h1 class="text-black font-bold ml-2">Arkaitz Calvo Saldias</h1>
+        <img class="h-8 w-auto rounded-full" src="../../assets/img/arkaitzImagen.jpeg" alt="{{translate('altPersonalImg')}}">
+        <h1 class="text-black font-bold ml-2">{{translate('name')}}</h1>
       </div>
       <div *ngIf="!isMobileView" class="sm:block sm:ml-6 animationsTopScroll" [ngClass]="{'menuItems': isScrollTop && !isMobileView}">
         <div class="flex space-x-4">
-          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'home', 'underline': activeSection !== 'home'}" (click)="scrollTo('home')">Inicio</a>
-          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'about', 'underline': activeSection !== 'about'}" (click)="scrollTo('about')">Sobre mi</a>
-          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'proyects', 'underline': activeSection !== 'proyects'}" (click)="scrollTo('proyects')">Proyectos</a>
-          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'knowledge', 'underline': activeSection !== 'knowledge'}" (click)="scrollTo('knowledge')">Conocimientos</a>
-          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'contact', 'underline': activeSection !== 'contact'}" (click)="scrollTo('contact')">Contacto</a>
+          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'home', 'underline': activeSection !== 'home'}" (click)="scrollTo('home')">{{translate('home')}}</a>
+          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'about', 'underline': activeSection !== 'about'}" (click)="scrollTo('about')">{{translate('about')}}</a>
+          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'proyects', 'underline': activeSection !== 'proyects'}" (click)="scrollTo('proyects')">{{translate('proyects')}}</a>
+          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'knowledge', 'underline': activeSection !== 'knowledge'}" (click)="scrollTo('knowledge')">{{translate('knowledge')}}</a>
+          <a class="px-3 py-2 text-sm font-bold" [ngClass]="{'text-yellow-500': activeSection === 'contact', 'underline': activeSection !== 'contact'}" (click)="scrollTo('contact')">{{translate('contact')}}</a>
         </div>
       </div>
       <div *ngIf="isMobileView" class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 " >
@@ -30,11 +30,11 @@
   </div>
   <div *ngIf="isMobileView" id="mobile-menu" [ngClass]="{'out': !showMobileMenu}" class="h-auto transition-opacity duration-500 ease-in-out origin-top-right right-0 bg-gray-800 absolute z-10">
     <div class="space-y-1 px-2 pb-3 pt-2">
-      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'home', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'home'}" (click)="scrollTo('home')">Inicio</a>
-      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'about', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'about'}" (click)="scrollTo('about')">Sobre mi</a>
-      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'proyects', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'proyects'}" (click)="scrollTo('proyects')">Proyectos</a>
-      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'knowledge', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'knowledge'}" (click)="scrollTo('knowledge')">Conocimientos</a>
-      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'contact', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'contact'}" (click)="scrollTo('contact')">Contacto</a>
+      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'home', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'home'}" (click)="scrollTo('home')">{{translate('home')}}</a>
+      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'about', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'about'}" (click)="scrollTo('about')">{{translate('about')}}</a>
+      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'proyects', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'proyects'}" (click)="scrollTo('proyects')">{{translate('proyects')}}</a>
+      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'knowledge', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'knowledge'}" (click)="scrollTo('knowledge')">{{translate('knowledge')}}</a>
+      <a class="block rounded-md px-3 py-2 text-base font-medium" [ngClass]="{'text-yellow-500': activeSection === 'contact', 'text-gray-300 hover:bg-gray-700 hover:text-white': activeSection !== 'contact'}" (click)="scrollTo('contact')">{{translate('contact')}}</a>
     </div>
   </div>
 </nav>
@@ -53,8 +53,8 @@
 </div>
 
 <div *ngIf="!isMobileView" class="horizontal-line animationsTopScroll" [ngClass]="{'botoomLineMargin': isScrollTop}">
-  <a *ngIf="isScrollTop" (click)="scrollTo('about')"><span class="text-center text-black text-sm font-bold">- CONTINÚA, <b class="text-center text-yellow-500 text-sm font-bold">QUIERO VER MÁS -</b></span></a>
-  <a *ngIf="!isScrollTop" (click)="scrollTo('home')"><span class="text-center text-black text-sm font-bold">- SUBIR AL <b class="text-center text-yellow-500 text-sm font-bold">INICIO -</b></span></a>
+  <a *ngIf="isScrollTop" (click)="scrollTo('about')"><span class="text-center text-black text-sm font-bold">{{translate('navbarBotonText1Par1')}}<b class="text-center text-yellow-500 text-sm font-bold">{{translate('navbarBotonText1Par2')}}</b></span></a>
+  <a *ngIf="!isScrollTop" (click)="scrollTo('home')"><span class="text-center text-black text-sm font-bold">{{translate('navbarBotonText2Par1')}}<b class="text-center text-yellow-500 text-sm font-bold">{{translate('navbarBotonText2Par2')}}</b></span></a>
 </div>
 
 <div *ngIf="!isMobileView" class="vertical-lineright animationsTopScroll" [ngClass]="{'vertical-lineScrollTop marginRightItems': isScrollTop}"></div>

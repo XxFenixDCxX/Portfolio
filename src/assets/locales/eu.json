@@ -1,3 +1,15 @@
 {
-  "aboutTitle": "NIRI BURUZ"
+  "aboutTitle": "NIRI BURUZ",
+  "name": "Arkaitz Calvo Saldias",
+  "altPersonalImg": "Arkaitz Calvo Saldias-ren argazkia",
+  "home": "Hasiera",
+  "about": "Niri buruz",
+  "proyects": "Proiektuak",
+  "knowledge": "Ezagutza",
+  "contact": "Kontaktua",
+  "navbarBotonText1Par1": "- JARRAITU, ",
+  "navbarBotonText1Par2": "GEHIAGO IKUSI NAHI DUT -",
+  "navbarBotonText2Par1": "- IGO ",
+  "navbarBotonText2Par2": "HASIERARA -",
+  "openMenu": "Ireki menu nagusia"
 }

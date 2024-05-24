@@ -3,6 +3,7 @@
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 17.3.7.
 
 ## Importante
+Crea la variable de entorno GITHUB_TOKEN, con el valor de tu token de github
 Antes de ejecutar ejecuta el comando `node prebuild.js`
 
 ## Servidor de desarrollo

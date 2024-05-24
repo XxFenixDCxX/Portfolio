@@ -2,22 +2,13 @@
 
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 17.3.7.
 
-**IMPORTANTE**
-
-Antes de ejecutar la aplicación, es necesario crear un archivo dentro de la carpeta src llamado config.ts con el siguiente contenido:
-
-```typescript
-export const AppConfig = {
-  production: false,
-  githubToken: 'TU_TOKEN_AQUÍ'
-};
-```
-
-Reemplaza TU_TOKEN_AQUÍ con tu token personal de GitHub con el permiso para repositorios públicos.
+## Importante
+Crea la variable de entorno GITHUB_TOKEN, con el valor de tu token de github
+Antes de ejecutar ejecuta el comando `node prebuild.js`
 
 ## Servidor de desarrollo
 
-Ejecuta `ng serve` para iniciar un servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
+Ejecuta `node prebuild.js && ng serve` para iniciar un servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
 
 ## Generación de código
 

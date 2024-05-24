@@ -7,12 +7,12 @@ import { TranslationService } from '../translation.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
   isScrollTop: boolean = true;
   isMobileView: boolean = false;
-  showMobileMenu:boolean = false;
+  showMobileMenu: boolean = false;
   activeSection: string = "home";
   showLanguageMenu: boolean = false;
   selectedLanguage = { img: '../../assets/img/es.png', alt: 'es' };
@@ -27,29 +27,26 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.selectedLanguage = this.languages.find(language => language.alt === this.translator.getLanguage()) || this.selectedLanguage;
     this.checkScreenSize();
-    window.addEventListener('resize', () => this.checkScreenSize());
+    window.addEventListener('resize', this.checkScreenSize.bind(this));
   }
 
   ngOnDestroy(): void {
-    window.removeEventListener('resize', () => this.checkScreenSize());
+    window.removeEventListener('resize', this.checkScreenSize.bind(this));
   }
 
   checkScreenSize(): void {
     if (typeof window !== 'undefined') {
       const mediaQuery = window.matchMedia('(min-width: 825px)');
-      if (!mediaQuery.matches) {
-        this.isScrollTop = false;
-        this.isMobileView = true;
-      } else {
-        this.isScrollTop = true;
-        this.isMobileView = false;
-      }
+      this.isMobileView = !mediaQuery.matches;
+      this.isScrollTop = mediaQuery.matches;
     }
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if(!this.showMobileMenu){
+    if (!this.showMobileMenu) {
+      const topMargin = 100;  // Define your custom top margin here
+
       this.isScrollTop = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) === 0;
 
       const aboutComponent = document.querySelector('app-about');
@@ -62,18 +59,18 @@ export class NavbarComponent implements OnInit {
         const aboutComponentPosition = aboutComponent.getBoundingClientRect();
         const homeComponentPosition = homeComponent.getBoundingClientRect();
         const proyectsSectionPosition = proyectsSection.getBoundingClientRect();
-        const knlowledgeComponentPosition = knowledgeComponent.getBoundingClientRect();
+        const knowledgeComponentPosition = knowledgeComponent.getBoundingClientRect();
         const contactComponentPosition = contactComponent.getBoundingClientRect();
 
-        if (aboutComponentPosition.top <= 0 && aboutComponentPosition.bottom > 0) {
+        if (aboutComponentPosition.top <= topMargin && aboutComponentPosition.bottom > topMargin) {
           this.activeSection = 'about';
-        } else if (homeComponentPosition.top <= 0 && homeComponentPosition.bottom > 0) {
+        } else if (homeComponentPosition.top <= topMargin && homeComponentPosition.bottom > topMargin) {
           this.activeSection = 'home';
-        } else if (proyectsSectionPosition.top <= 0 && proyectsSectionPosition.bottom > 0) {
+        } else if (proyectsSectionPosition.top <= topMargin && proyectsSectionPosition.bottom > topMargin) {
           this.activeSection = 'proyects';
-        } else if (knlowledgeComponentPosition.top <= 0 && knlowledgeComponentPosition.bottom > 0) {
+        } else if (knowledgeComponentPosition.top <= topMargin && knowledgeComponentPosition.bottom > topMargin) {
           this.activeSection = 'knowledge';
-        } else if (contactComponentPosition.top <= 0 && contactComponentPosition.bottom > 0) {
+        } else if (contactComponentPosition.top <= topMargin && contactComponentPosition.bottom > topMargin) {
           this.activeSection = 'contact';
         }
       }
@@ -81,49 +78,39 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleMobileMenu() {
-    this.showMobileMenu = this.showMobileMenu ? false : true;
+    this.showMobileMenu = !this.showMobileMenu;
     const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu && !this.showMobileMenu) {
-      mobileMenu.addEventListener('animationend', () => {
-        if (!this.showMobileMenu) {
-          mobileMenu.classList.add('hidden');
-        }
-      });
-    } else if(mobileMenu){
-      mobileMenu.classList.remove('hidden');
+    if (mobileMenu) {
+      if (!this.showMobileMenu) {
+        mobileMenu.addEventListener('animationend', () => {
+          if (!this.showMobileMenu) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      } else {
+        mobileMenu.classList.remove('hidden');
+      }
     }
   }
 
-  scrollTo(toWhat : string) {
-    if (toWhat === 'about') {
-      const aboutSection = document.getElementById('aboutSection');
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else if (toWhat === 'home') {
-      const homeSection = document.getElementById('homeSection');
-      if (homeSection) {
-        homeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else if (toWhat === 'proyects') {
-      const proyectsSection = document.getElementById('proyectsSection');
-      if (proyectsSection) {
-        proyectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else if (toWhat === 'knowledge') {
-      const knowledgeSection = document.getElementById('knowledgeSection');
-      if (knowledgeSection) {
-        knowledgeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else if (toWhat === 'contact') {
-      const contactSection = document.getElementById('contactSection');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollTo(toWhat: string) {
+    const sections: { [key: string]: string } = {
+      'about': 'aboutSection',
+      'home': 'homeSection',
+      'proyects': 'proyectsSection',
+      'knowledge': 'knowledgeSection',
+      'contact': 'contactSection'
+    };
+
+    const sectionId = sections[toWhat];
+    if (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
 
-
-    if(this.isMobileView){
+    if (this.isMobileView) {
       this.showMobileMenu = false;
     }
   }
@@ -137,7 +124,7 @@ export class NavbarComponent implements OnInit {
   }
 
   selectLanguage(language: { img: string, alt: string }) {
-    if(this.isMobileView){
+    if (this.isMobileView) {
       this.showMobileMenu = false;
     }
     this.selectedLanguage = language;

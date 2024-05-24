@@ -45,7 +45,7 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (!this.showMobileMenu) {
-      const topMargin = 100;  // Define your custom top margin here
+      const topMargin = 100;
 
       this.isScrollTop = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) === 0;
 

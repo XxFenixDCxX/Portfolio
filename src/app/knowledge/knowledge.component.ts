@@ -22,6 +22,7 @@ export class KnowledgeComponent {
     { name: 'Bulma', percentage: 70 },
     { name: 'Tailwind', percentage: 40 },
     { name: 'Angular', percentage: 80 },
+    { name: 'React', percentage: 50 },
     { name: 'Ionic', percentage: 50 },
     { name: 'Python', percentage: 70 },
     { name: 'C#', percentage: 70 },
